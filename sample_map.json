@@ -1,0 +1,10 @@
+{
+  "_설명": "파일명/Remarks로 시편을 못 찾은 파일의 수동 매핑. 근거를 note에 적는다. 팀이 확인 후 고쳐 쓰세요.",
+  "CVSweep4284_2_1_3": {"sample": "MFBM2", "note": "±3 V 스윕 = MFBM2 Vmax, 현장 대화 기록"},
+  "CVSweep4284_3_1": {"sample": "MFBM8", "note": "±9.6 V 스윕 = MFBM8 Vmax로 추정"},
+  "CVSweep4284_3_2": {"sample": "MFBM8", "note": "±9.6 V 스윕 = MFBM8 Vmax로 추정"},
+  "CVSweep4284_3_3": {"sample": "MFBM8", "note": "±9.6 V 스윕 = MFBM8 Vmax로 추정"},
+  "CVSweep4284_3_4": {"sample": "MFBM8", "note": "±9.6 V 스윕 = MFBM8 Vmax로 추정"},
+  "FERAM_Hysteresis_1": {"sample": "미기재", "note": "Remarks 없음"},
+  "WGFMU_Pattern_Editor": {"sample": "미기재 (MFBM2 추정)", "note": "16:19 MFBM2 FERAM 직후 같은 패드에서 진행된 것으로 추정"}
+}

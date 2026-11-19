@@ -1,0 +1,28 @@
+{
+  "_설명": "팀 공정 레시피. value가 null인 항목은 아직 기록이 없는 값이니 실험노트를 보고 채우세요. status: 확정 / 계획 / 미기입",
+  "structures": {
+    "MFM": "Pt(하부) / BaTiO3 / Pt(상부 패드)",
+    "MFBM": "Pt(하부) / TiO2 버퍼 / BaTiO3 / Pt(상부 패드)"
+  },
+  "steps": [
+    {"no": 1, "stage": "기판", "item": "하부전극 기판", "value": "Pt/Si, 10 mm x 10 mm", "status": "확정", "note": "750 C 열처리를 견뎌야 하므로 유리 기판 불가"},
+    {"no": 2, "stage": "TiO2 버퍼 (MFBM만)", "item": "졸 조성 / 농도", "value": null, "status": "미기입", "note": "전구체, 용매, 몰농도를 실험노트에서 옮겨 적기"},
+    {"no": 3, "stage": "TiO2 버퍼 (MFBM만)", "item": "스핀코팅", "value": null, "status": "미기입", "note": "rpm, 시간"},
+    {"no": 4, "stage": "TiO2 버퍼 (MFBM만)", "item": "코팅 횟수 / 두께", "value": "1회, 32.69 nm", "status": "확정", "note": ""},
+    {"no": 5, "stage": "TiO2 버퍼 (MFBM만)", "item": "열처리", "value": "450 C, 60분, 승온 1 C/min", "status": "확정", "note": "anatase 형성 온도"},
+    {"no": 6, "stage": "BTO", "item": "졸 조성 / 농도", "value": null, "status": "미기입", "note": "Ba 전구체, Ti 전구체, 용매, 안정제, 몰농도"},
+    {"no": 7, "stage": "BTO", "item": "스핀코팅", "value": null, "status": "미기입", "note": "rpm, 시간"},
+    {"no": 8, "stage": "BTO", "item": "층간 건조", "value": "층마다 상온 2분 -> 핫플레이트 2분 -> 150 C 10분", "status": "확정", "note": "실험 일정표 기준"},
+    {"no": 9, "stage": "BTO", "item": "코팅 횟수 / 1회 두께", "value": "2 / 4 / 6 / 8회, 1회 43.8 nm", "status": "확정", "note": "11/11 단면 SEM: 3회 131.37 nm"},
+    {"no": 10, "stage": "BTO", "item": "최종 열처리", "value": "750 C, 승온 1 C/min", "status": "확정", "note": "유지시간 30분(일정표) / 60분(추천안) 중 실제값 확인 필요"},
+    {"no": 11, "stage": "상부전극", "item": "Pt 패드", "value": "원형, 지름 750 um (면적 4.42e-3 cm2)", "status": "확정", "note": "하부 Pt 접점은 시편 모서리 노출부"},
+    {"no": 12, "stage": "분석", "item": "XRD", "value": "11/11 BTO 700 C 30분, 11/13 BTO 750 C", "status": "확정", "note": "페로브스카이트 BTO 확인, 결정립 약 8~10 nm, 2차상 피크 관찰"},
+    {"no": 13, "stage": "분석", "item": "단면 SEM", "value": "11/11, BTO 3회 131.37 nm", "status": "확정", "note": ""}
+  ],
+  "history": [
+    {"date": "11/11", "what": "BTO 700 C 시편 XRD, 단면 SEM (1회 43.8 nm 확인)"},
+    {"date": "11/13", "what": "BTO 750 C 시편 XRD"},
+    {"date": "11/17", "what": "B1500A 1차 측정: HRSMU I-V 정상, WGFMU P-E open/short형"},
+    {"date": "11/19", "what": "B1500A 2차 측정: 41개 파일. I-V 바닥신호(절연), C-V open/short, P-E/Pattern 단락 진단"}
+  ]
+}

@@ -1,0 +1,18 @@
+[
+  {"topic": "스위칭 속도", "cite": "Jiang, Y. et al. (2022) Enabling ultra-low-voltage switching in BaTiO3. Nature Materials 21, 779.", "use": "에피 BTO 약 2 ns 스위칭, Merz 법칙 -> 메모리 페이지의 속도 상한", "url": "https://escholarship.org/content/qt42n664kt/qt42n664kt.pdf", "type": "논문"},
+  {"topic": "측정 방법", "cite": "Liang, Kezer, Heron (2026) 강유전 스위칭 측정 가이드라인 (PUND, KAI, NLS, Merz, RC, 누설 함정). arXiv:2604.05328", "use": "측정 시뮬레이터의 판정 기준", "url": "https://arxiv.org/abs/2604.05328", "type": "사전공개"},
+  {"topic": "Si 위 BTO", "cite": "Zhao, Noheda, Sarott (2025) BTO 박막의 주파수별 항전압, PUND 2Pr 16 uC/cm2, 10^10회 무피로. arXiv:2510.13435", "use": "내구성(피로) 기준값", "url": "https://arxiv.org/abs/2510.13435", "type": "사전공개"},
+  {"topic": "항전계 주파수 의존", "cite": "Scientific Reports (2014) 강유전 박막에서 항전계의 주파수 의존성 (Ec ~ f^beta). srep04772", "use": "측정 주파수 선택 근거", "url": "https://www.nature.com/articles/srep04772", "type": "논문"},
+  {"topic": "MFDM 구조", "cite": "Segatto, M. et al. (2022) 금속/강유전/유전/금속 구조에서 PUND 측정의 한계. IEEE J-EDS. arXiv:2201.12103", "use": "MFBM 루프가 기울고 작아지는 이유 (직렬 유전층)", "url": "https://arxiv.org/abs/2201.12103", "type": "논문"},
+  {"topic": "졸-겔 BTO 분극", "cite": "Hosokura, T. et al. (2015) CSD BTO 박막의 배향별 강유전 특성 ((100) 0.9, (110) 1.9, (111) 3.0 uC/cm2). RSC Advances", "use": "Ps/Pr 가정값 범위", "url": "https://pubs.rsc.org/en/content/articlehtml/2015/ra/c5ra22195a", "type": "논문"},
+  {"topic": "Pt/TiO2 계면", "cite": "Michalas, L. et al. (2017) Pt/TiO2 계면 쇼트키 장벽(약 0.61 eV)과 산소 공공. arXiv:1712.04218", "use": "TiO2 버퍼의 누설 억제 근거", "url": "https://arxiv.org/abs/1712.04218", "type": "논문"},
+  {"topic": "TiO2 씨앗층", "cite": "Muralt, P. et al. (1998) Texture control of PbTiO3 and Pb(Zr,Ti)O3 thin films with TiO2 seeding. J. Appl. Phys. 83, 3835.", "use": "TiO2가 배향을 바꿀 수 있다는 근거", "url": "", "type": "논문"},
+  {"topic": "NLS 모델", "cite": "Tagantsev, A. K. et al. (2002) Non-Kolmogorov-Avrami switching kinetics in ferroelectric thin films. Phys. Rev. B 66, 214109.", "use": "메모리 페이지 스위칭 모델", "url": "https://doi.org/10.1103/PhysRevB.66.214109", "type": "논문"},
+  {"topic": "다결정 스위칭", "cite": "Jo, J. Y. et al. (2007) Domain switching kinetics in disordered ferroelectric thin films. Phys. Rev. Lett. 99, 267602.", "use": "NLS 분포 폭(무질서도)", "url": "https://doi.org/10.1103/PhysRevLett.99.267602", "type": "논문"},
+  {"topic": "1T1C FeRAM", "cite": "Kawashima, S. et al. (2007) A reliable 1T1C FeRAM using a thermal history tracking 2T2C dual reference level technique. IEICE Trans. Electron. E90-C(10), 1941.", "use": "읽기 기준전압, 비트라인 감지 방식", "url": "https://doi.org/10.1093/ietele/e90-c.10.1941", "type": "논문"},
+  {"topic": "BTO 디커플링", "cite": "Borland, W. et al. 기판 내장형 BTO 박막 디커플링 커패시터 (>1 uF/cm2). IPC APEX 발표 자료", "use": "통신 보드용 내장 커패시터 응용", "url": "", "type": "발표자료"},
+  {"topic": "BTO 결정화", "cite": "George et al. (2013) 졸-겔 스핀코팅 BTO, 0.25 M, 약 153 nm, 700 C 20분", "use": "11/11 XRD 비교 대상", "url": "", "type": "논문"},
+  {"topic": "BTO 결정화", "cite": "Whittam et al. (2018) Pt 위 졸-겔 BTO 750~900 C, 900 C에서 Ba2Ti13O22 2차상", "use": "열처리 상한 근거", "url": "", "type": "논문"},
+  {"topic": "BTO 결정화", "cite": "Bajac et al. (2014) Pt 기판 스핀코팅 BTO, 750 C에서 결정립 약 25 nm", "use": "750 C 선택 근거", "url": "", "type": "논문"},
+  {"topic": "상용 FRAM", "cite": "Infineon FM16W08 데이터시트: 접근 70 ns, 사이클 130 ns, 10^14회", "use": "메모리 페이지 비교 기준", "url": "", "type": "데이터시트"}
+]
