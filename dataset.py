@@ -5,10 +5,10 @@ import json
 import re
 from pathlib import Path
 
-from .b1500 import parse_file, kind_of, guess_sample, judge
+from b1500 import parse_file, kind_of, guess_sample, judge
 
-ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "data" / "1119"
+ROOT = Path(__file__).resolve().parent
+DATA = ROOT
 KIND_KO = {"IV": "I–V (HRSMU)", "CV": "C–V (4284A)", "PE": "P–E (WGFMU)", "PATTERN": "Pattern Editor"}
 
 

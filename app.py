@@ -6,7 +6,7 @@ BTO Ferro Lab - 졸-겔 BaTiO3 강유전 커패시터 연구 도구
 """
 import streamlit as st
 
-from core.physics import Material
+from physics import Material
 
 st.set_page_config(page_title="BTO Ferro Lab", page_icon="⚡", layout="wide")
 
@@ -34,20 +34,20 @@ st.session_state["material"] = sidebar_material()
 
 pages = {
     "연구": [
-        st.Page("views/home.py", title="개요", icon="🏠", default=True),
-        st.Page("views/recipe.py", title="공정 레시피 · XRD", icon="🧪"),
-        st.Page("views/design.py", title="소자 설계값", icon="📐"),
+        st.Page("page_home.py", title="개요", icon="🏠", default=True),
+        st.Page("page_recipe.py", title="공정 레시피 · XRD", icon="🧪"),
+        st.Page("page_design.py", title="소자 설계값", icon="📐"),
     ],
     "측정": [
-        st.Page("views/simulator.py", title="측정 진단 시뮬레이터", icon="🔬"),
-        st.Page("views/data1119.py", title="11/19 측정 데이터", icon="📊"),
+        st.Page("page_simulator.py", title="측정 진단 시뮬레이터", icon="🔬"),
+        st.Page("page_data1119.py", title="11/19 측정 데이터", icon="📊"),
     ],
     "응용": [
-        st.Page("views/memory.py", title="차세대 통신 메모리", icon="📡"),
+        st.Page("page_memory.py", title="차세대 통신 메모리", icon="📡"),
     ],
     "자료": [
-        st.Page("views/references.py", title="레퍼런스", icon="📚"),
-        st.Page("views/ai_log.py", title="AI 활용 · 검증 기록", icon="🤖"),
+        st.Page("page_references.py", title="레퍼런스", icon="📚"),
+        st.Page("page_ai_log.py", title="AI 활용 · 검증 기록", icon="🤖"),
     ],
 }
 st.navigation(pages).run()

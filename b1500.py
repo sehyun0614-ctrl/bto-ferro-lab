@@ -11,7 +11,7 @@ from dataclasses import dataclass, field
 import numpy as np
 import pandas as pd
 
-from .physics import A_PAD, T_COAT_BTO, T_TIO2
+from physics import A_PAD, T_COAT_BTO, T_TIO2
 
 OVERFLOW = 1e30
 

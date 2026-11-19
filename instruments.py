@@ -10,7 +10,7 @@
 from __future__ import annotations
 
 import numpy as np
-from .physics import Device, quasistatic_qv, triangle, loop_metrics, small_signal_c
+from physics import Device, quasistatic_qv, triangle, loop_metrics, small_signal_c
 
 CONTACTS = {
     "정상 접촉": "normal",
