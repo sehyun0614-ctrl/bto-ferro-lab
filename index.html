@@ -6901,7 +6901,7 @@ function demoRefresh() {
   requestAnimationFrame(() => window.scrollTo({ top: y, behavior: "instant" }));
   clearTimeout(demoRefresh.t); demoRefresh.t = setTimeout(() => document.body.classList.remove("noanim"), 700);
 }
-// ---- 결과 30초 v3: 결과 분석 → 자동 분석 리포트(성능 평가 · 추천 변수 · 비교 창) → 변수별 시연
+// ---- 결과 30초 v3: 결과 분석 → 자동 분석 리포트(성능 평가 · 추천 변수) → 변수별 시연 → 추천 전후 비교 (비교 창 중복 제거)
 presSeg = (orig => async function (seg) {
   if (seg !== 2) return orig(seg);
   const id = ++PT.run, W = ms => presWait(ms, id), sc = (el, b = "center") => el && el.scrollIntoView({ behavior: "smooth", block: b });
@@ -6912,11 +6912,10 @@ presSeg = (orig => async function (seg) {
     const rb = $$("#stage button").find(b => /리포트 보기/.test(b.textContent)); if (rb) { rb.classList.add("clicking"); await W(300); rb.click(); } else go("ai");
     presBar("② 소자 성능 평가: 읽기 신호가 가장 약함"); sc($$("#stage .grid2 .card")[0], "start"); await W(3000);
     presBar("② AI가 바꿔 볼 공정 변수를 민감도 순으로 추천"); sc($("#stage .airec")); await W(3000);
-    const ap = $("#ai-apply"); if (ap) { ap.classList.add("clicking"); sc(ap); await W(400); }
-    presBar("② 추천 조건 비교: 기존 소자 vs 변수 바꾼 소자"); aiCmpModal(aiAnalyze().rec, 0); await W(900);
-    const ov = $(".cmpov"); if (ov) { const g = ov.querySelector(".cpg"); g && ov.scrollTo({ top: g.offsetTop - 40, behavior: "smooth" }); } await W(3500);
     $(".cmpov")?.remove();
-    S.demo2 = { sel: "base", seen: ["base"], recShown: false }; go("demo"); window.scrollTo(0, 0); presBar("② 공정 단계별로 하나씩 바꿔 보기"); await W(500); sc($(".dmheat"), "start"); await W(700);
+    presBar("② 추천 변수를 공정 단계별로 하나씩 직접 바꿔 봅니다"); await W(900);
+    S.demo2 = { sel: "base", seen: ["base"], recShown: false }; document.body.classList.add("noanim"); go("demo"); window.scrollTo(0, 0); setTimeout(() => document.body.classList.remove("noanim"), 700);
+    presBar("② 공정 단계별로 하나씩 바꿔 보기"); await W(900); sc($(".dmheat"), "start"); await W(900);
     await click("uvX", "UV 처리를 빼면? → 균일도 저하", 1200);
     await click("ann700", "열처리를 700 °C 단일로? → 결정성 저하", 1200);
     await click("coat6", "BTO 6회? → 수율·균일도 저하", 1200);
@@ -6925,8 +6924,9 @@ presSeg = (orig => async function (seg) {
     await click("d30", "TiO₂ 희석 30 mL? → 신호↑ · 누설 감소 폭↓", 1200);
     await click("mfm", "버퍼 제거? → 신호 최대, 누설 억제 없음", 1200);
     presBar("② 두 기준을 만족하는 조합 중 1위를 추천합니다"); S.demo2.recShown = true; await click("rec", "★ 추천 조합: 전후 비교 · trade-off · 전기적 특성", 2000);
-    sc($("#dm-map")); await W(1800);
-    sc($(".dmrec")); await presReveal(id, 450); await W(1200);
+    presBar("② 추천 조합 · 신호 vs 누설 trade-off"); sc($("#dm-map")); await W(2200);
+    presBar("② 추천 조합 · 기존 소자와 전후 비교"); sc($("#dm-cmp"), "start"); await W(3000);
+    presBar("② 추천 결론"); sc($(".dmrec")); await presReveal(id, 450); await W(1500);
     presBar("② 결과 시연 완료");
   } catch (e) { if (e !== "stop") console.error(e); }
 })(presSeg);
